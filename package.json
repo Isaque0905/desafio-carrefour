@@ -6,7 +6,7 @@
     "test": "cypress run",
     "report:merge": "mochawesome-merge mochawesome-report/*.json > mochawesome-report/output.json",
     "report:generate": "marge mochawesome-report/output.json -f report -o mochawesome-report",
-    "test:ci": "npm run test && npm run report:merge && npm run report:generate"
+    "test:ci": "cypress run --reporter mochawesome --reporter-options reportDir=mochawesome-report"
   },
   "keywords": [],
   "author": "",
