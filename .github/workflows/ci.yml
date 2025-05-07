@@ -8,7 +8,8 @@ on:
 
 jobs:
   cypress-api-tests:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
+
     steps:
       - name: Checkout código
         uses: actions/checkout@v3
@@ -20,6 +21,9 @@ jobs:
 
       - name: Instala dependências
         run: npm install
+
+      - name: Garantir permissões de execução para Cypress
+        run: chmod +x ./node_modules/.bin/cypress
 
       - name: Executa testes e gera relatório
         run: npm run test:ci
