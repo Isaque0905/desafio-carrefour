@@ -25,6 +25,9 @@ jobs:
       - name: Garantir permissões de execução para Cypress
         run: chmod +x ./node_modules/.bin/cypress
 
+      - name: Instala o binário do Cypress
+        run: npx cypress install
+
       - name: Executa testes e gera relatório
         run: npm run test:ci
 
