@@ -43,8 +43,8 @@ carrefour-api-tests/
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/carrefour-api-tests.git
-cd carrefour-api-tests
+git clone https://github.com/Isaque0905/desafio-carrefour.git
+cd desafio-carrefour
 ```
 
 2. Instale as dependências:
