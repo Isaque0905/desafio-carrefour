@@ -5,15 +5,13 @@ module.exports = defineConfig({
     baseUrl: 'https://serverest.dev',
     specPattern: 'cypress/e2e/**/*.cy.js',
     setupNodeEvents(on, config) {
-      require('cypress-mochawesome-reporter/plugin')(on);
+  
     }
   },
-  reporter: 'cypress-mochawesome-reporter',
+  reporter: 'mocha-junit-reporter',
   reporterOptions: {
-    reportDir: 'mochawesome-report',
-    overwrite: false,
-    html: true,
-    json: true,
-    timestamp: 'mmddyyyy_HHMMss'
+    mochaFile: 'cypress/results/test-output-[hash].xml',
+    toConsole: true,
+    attachments: true
   }
 });
